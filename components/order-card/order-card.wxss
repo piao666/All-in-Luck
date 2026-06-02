@@ -1,0 +1,3 @@
+.component-placeholder {
+  box-sizing: border-box;
+}

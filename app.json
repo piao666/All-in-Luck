@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/menu/menu",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/points/points",
+    "pages/recharge/recharge",
+    "pages/product-detail/product-detail",
+    "pages/order-list/order-list",
+    "pages/order-detail/order-detail"
+  ],
+  "window": {
+    "navigationBarTitleText": "All in Luck",
+    "navigationBarBackgroundColor": "#13164F",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#13164F"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FF3D45",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "点单"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

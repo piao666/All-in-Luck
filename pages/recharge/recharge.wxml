@@ -1,0 +1,60 @@
+<view class="recharge-page">
+  <view class="member-card">
+    <view class="card-brand">
+      <text>ALL IN</text>
+      <text>LUCK</text>
+    </view>
+    <view class="card-copy">
+      <view class="page-title">会员充值</view>
+      <view class="page-subtitle">余额仅用于 UI 演示展示</view>
+      <view class="balance-row">
+        <text>当前余额</text>
+        <text class="balance-value">¥{{balance}}</text>
+      </view>
+    </view>
+    <view class="card-chip"></view>
+  </view>
+
+  <view class="section-head">
+    <text>充值套餐</text>
+    <text class="section-tip">固定档位 · 到店演示</text>
+  </view>
+
+  <view class="plan-list">
+    <view
+      wx:for="{{plans}}"
+      wx:key="id"
+      class="plan-card {{selectedPlanId === item.id ? 'active' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="selectPlan"
+    >
+      <view class="plan-main">
+        <view class="plan-amount">充 {{item.amount}}</view>
+        <view class="plan-desc">{{item.desc}}</view>
+      </view>
+      <view class="plan-gift">
+        <text class="gift-label">{{item.tag}}</text>
+        <text class="gift-value">送 {{item.bonus}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="summary-card">
+    <view class="summary-row">
+      <text>已选套餐</text>
+      <text>充 {{selectedPlan.amount}} 送 {{selectedPlan.bonus}}</text>
+    </view>
+    <view class="summary-row">
+      <text>到账余额</text>
+      <text class="gold-text">¥{{arrivalAmount}}</text>
+    </view>
+    <button class="recharge-button" bindtap="confirmRecharge">确认充值</button>
+  </view>
+
+  <view class="rule-card">
+    <view class="rule-title">充值说明</view>
+    <view class="rule-row">1. 当前页面仅为 UI 演示，不接入微信支付。</view>
+    <view class="rule-row">2. 赠送金额仅用于页面展示，不产生真实余额。</view>
+    <view class="rule-row">3. 会员余额、权益和退款规则以后端正式规则为准。</view>
+  </view>
+</view>

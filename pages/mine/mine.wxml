@@ -1,0 +1,65 @@
+<view class="mine-page">
+  <view class="member-hero">
+    <view class="hero-title">会员中心</view>
+    <view class="hero-content">
+      <view class="avatar"></view>
+      <view class="login-copy">
+        <view class="login-title">立即登录</view>
+        <view class="login-subtitle">登录后解锁专属会员权益</view>
+        <button class="login-button" bindtap="showLoginModal">登录/注册</button>
+      </view>
+      <view class="brand-card">
+        <text>ALL IN</text>
+        <text>LUCK</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="stats-card">
+    <view class="stat-item" wx:for="{{stats}}" wx:key="label">
+      <view class="stat-value">{{item.value}}</view>
+      <view class="stat-label">{{item.label}}</view>
+    </view>
+  </view>
+
+  <view class="white-card order-card">
+    <view class="card-header">
+      <text>我的订单</text>
+      <view class="card-more" bindtap="goOrders">全部订单 ></view>
+    </view>
+    <view class="order-status-row">
+      <view
+        wx:for="{{orderStatuses}}"
+        wx:key="label"
+        class="order-status"
+        bindtap="goOrders"
+      >
+        <view class="icon-box order-icon">{{item.icon}}</view>
+        <view class="status-label">{{item.label}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="white-card grid-card">
+    <view class="grid-list">
+      <view
+        wx:for="{{gridItems}}"
+        wx:key="label"
+        class="grid-item"
+        data-type="{{item.type}}"
+        bindtap="handleGridTap"
+      >
+        <view class="icon-box grid-icon">{{item.icon}}</view>
+        <view class="grid-label">{{item.label}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="points-banner" bindtap="goPoints">
+    <view>
+      <view class="points-title">积分兑换好礼</view>
+      <view class="points-subtitle">超值回馈，尊享不停</view>
+    </view>
+    <view class="points-arrow">></view>
+  </view>
+</view>

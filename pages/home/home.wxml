@@ -1,0 +1,104 @@
+<view class="home-page">
+  <view class="brand-row">
+    <text class="suit">♠</text>
+    <text class="brand-title">All in Luck</text>
+    <text class="suit">◆</text>
+  </view>
+
+  <view class="search-card">
+    <text class="search-icon"></text>
+    <text class="search-placeholder">欢迎光临，很高兴为您服务</text>
+    <button class="search-button" bindtap="onSearch">搜索</button>
+  </view>
+
+  <view class="brand-banner">
+    <view class="poker-stack">
+      <view class="poker-card card-a">A</view>
+      <view class="poker-card card-k">K</view>
+      <view class="chip chip-main"></view>
+      <view class="chip chip-small"></view>
+    </view>
+    <view class="brand-copy">
+      <view class="banner-title">ALL IN</view>
+      <view class="banner-title large">LUCK</view>
+      <view class="banner-line"></view>
+      <view class="banner-subtitle">TEXAS HOLD'EM BAR</view>
+    </view>
+    <view class="glass-shape"></view>
+  </view>
+
+  <view class="action-banner order-banner" bindtap="goMenu">
+    <view class="banner-art">
+      <view class="bottle-shape"></view>
+      <view class="red-chip"></view>
+      <view class="mini-card">A</view>
+    </view>
+    <view class="action-copy">
+      <view class="action-title">立即点单</view>
+      <view class="action-subtitle">Place order now</view>
+    </view>
+    <view class="arrow-button">›</view>
+  </view>
+
+  <view class="action-banner recharge-banner" bindtap="goRecharge">
+    <view class="action-copy">
+      <view class="action-title">会员充值</view>
+      <view class="deal-box">
+        <text>充588送228</text>
+        <text>充1588送688</text>
+      </view>
+    </view>
+    <view class="member-card">
+      <text>ALL IN LUCK</text>
+      <text>VIP MEMBER</text>
+    </view>
+    <view class="gold-coins">
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+    <view class="arrow-button">›</view>
+  </view>
+
+  <view class="service-grid">
+    <view class="service-card" bindtap="showWifiToast">
+      <view class="wifi-mark">
+        <view></view>
+        <view></view>
+        <view></view>
+      </view>
+      <view>
+        <view class="service-title">WIFI</view>
+        <view class="service-subtitle">高速网络  畅快体验</view>
+      </view>
+      <view class="small-arrow">›</view>
+    </view>
+
+    <view class="service-card" bindtap="showSuppliesToast">
+      <view class="supply-box">
+        <view class="supply-item"></view>
+        <view class="supply-item tall"></view>
+        <view class="supply-item"></view>
+      </view>
+      <view>
+        <view class="service-title">贴心用品</view>
+        <view class="service-subtitle">免费取用</view>
+      </view>
+      <view class="small-arrow">›</view>
+    </view>
+  </view>
+
+  <view class="action-banner points-banner" bindtap="goPoints">
+    <view class="trophy-shape">
+      <view class="trophy-cup"></view>
+      <view class="trophy-base"></view>
+    </view>
+    <view class="action-copy">
+      <view class="action-title">积分兑换</view>
+      <view class="action-subtitle">Points Redemption</view>
+      <view class="points-note">积分兑好礼，超值回馈享不停</view>
+    </view>
+    <view class="arrow-button">›</view>
+  </view>
+
+</view>

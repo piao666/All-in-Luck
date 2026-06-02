@@ -1,0 +1,55 @@
+<view class="points-page">
+  <view class="points-hero">
+    <view class="hero-top">
+      <view>
+        <view class="hero-title">积分兑换</view>
+        <view class="hero-subtitle">All in Luck 会员专属好礼</view>
+      </view>
+      <view class="coin-icon">兑</view>
+    </view>
+    <view class="points-card">
+      <text class="points-label">当前可用积分</text>
+      <text class="points-value">{{points}}</text>
+      <text class="points-note">到店消费、套餐购买均可获得积分</text>
+    </view>
+  </view>
+
+  <scroll-view class="tab-scroll" scroll-x="true" enhanced="true" show-scrollbar="false">
+    <view class="tab-row">
+      <view
+        wx:for="{{tabs}}"
+        wx:key="id"
+        class="tab-item {{selectedTab === item.id ? 'active' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="selectTab"
+      >{{item.name}}</view>
+    </view>
+  </scroll-view>
+
+  <view class="gift-list">
+    <view wx:for="{{filteredGifts}}" wx:key="id" class="gift-card">
+      <view class="gift-image {{item.imageType}}">
+        <view class="image-chip"></view>
+        <view class="image-glass"></view>
+      </view>
+      <view class="gift-info">
+        <view class="gift-title-row">
+          <text class="gift-name">{{item.name}}</text>
+          <text class="gift-tag">{{item.tag}}</text>
+        </view>
+        <view class="gift-desc">{{item.desc}}</view>
+        <view class="gift-bottom">
+          <view class="gift-points">{{item.points}} 积分</view>
+          <button class="redeem-button" data-id="{{item.id}}" bindtap="redeemGift">立即兑换</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="rule-card">
+    <view class="rule-title">兑换规则</view>
+    <view class="rule-row">1. 当前页面仅用于 UI 演示，不真实扣减积分。</view>
+    <view class="rule-row">2. 兑换商品需到店出示订单或兑换记录使用。</view>
+    <view class="rule-row">3. 不同商品库存、有效期以门店展示为准。</view>
+  </view>
+</view>
