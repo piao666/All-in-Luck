@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "All-in Luck",
+    "navigationBarBackgroundColor": "#1F2937",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#111827"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
