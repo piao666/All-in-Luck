@@ -1,0 +1,12 @@
+node_modules/
+miniprogram_npm/
+dist/
+build/
+.DS_Store
+*.log
+.codex_tmp_docx/
+*.zip
+*.tar.gz
+project.private.config.json
+*.pem
+*.key

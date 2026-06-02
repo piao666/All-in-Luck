@@ -1,0 +1,92 @@
+<view class="detail-page">
+  <view class="detail-nav">
+    <view class="back-icon" bindtap="goBack"></view>
+    <view class="nav-title">商品详情</view>
+    <view class="capsule">
+      <text>•••</text>
+      <view></view>
+    </view>
+  </view>
+
+  <view class="hero-card">
+    <view class="brand-badge">
+      <view class="badge-cards">A K</view>
+      <view>
+        <text>ALL IN</text>
+        <text>LUCK</text>
+      </view>
+    </view>
+    <view class="hero-copy">
+      <view class="suits">♠  ♥  ◆</view>
+      <view class="hero-title">特调鸡尾酒</view>
+      <view class="hero-subtitle">[ 精 选 好 酒  微 醺 时 刻 ]</view>
+    </view>
+    <view class="drink-stage">
+      <view class="bottle"></view>
+      <view class="hero-glass red"></view>
+      <view class="hero-glass gold"></view>
+      <view class="hero-glass light"></view>
+      <view class="candle"></view>
+    </view>
+    <view class="hero-ribbon">五款招牌鸡尾酒任选搭配｜适合多人分享</view>
+  </view>
+
+  <view class="product-head">
+    <view class="head-left">
+      <view class="product-title">{{product.name}}</view>
+      <view class="tag-row">
+        <text class="tag hot">热销</text>
+        <text class="tag gold">超值推荐</text>
+        <text class="tag gold">VIP专享</text>
+      </view>
+    </view>
+    <view class="head-right">
+      <view class="product-price">￥{{product.price}}</view>
+      <view class="product-points">赠送 {{product.points}} 娱乐积分</view>
+      <view class="product-sales">已售 {{product.sales}}</view>
+    </view>
+  </view>
+
+  <view class="intro-card">
+    <view class="intro-icon">🍾</view>
+    <view class="intro-copy">
+      <view class="intro-title">{{product.desc}}</view>
+      <view class="intro-text">精选人气特调，口感丰富，微醺更尽兴 ✦</view>
+    </view>
+  </view>
+
+  <view class="info-card">
+    <view class="card-title">◆ 套餐内容 ◆</view>
+    <view wx:for="{{packageItems}}" wx:key="name" class="package-row">
+      <text class="row-icon">{{item.icon}}</text>
+      <text class="row-name">{{item.name}}</text>
+      <text class="row-value">{{item.value}}</text>
+    </view>
+  </view>
+
+  <view class="info-card usage-card">
+    <view class="card-title">◆ 使用说明 ◆</view>
+    <view class="usage-list">
+      <view wx:for="{{usageItems}}" wx:key="title" class="usage-item">
+        <view class="usage-icon">{{item.icon}}</view>
+        <view class="usage-title">{{item.title}}</view>
+        <view class="usage-text">{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="quality-note">正品保障 · 放心购买</view>
+
+  <view class="bottom-bar">
+    <view class="detail-quantity">
+      <button class="detail-quantity-btn" catchtap="decreaseQuantity">-</button>
+      <text class="detail-quantity-num">{{quantity}}</text>
+      <button class="detail-quantity-btn" catchtap="increaseQuantity">+</button>
+    </view>
+    <button class="cart-button" bindtap="addToCart">
+      <text class="cart-icon">🛒</text>
+      <text>加入购物车</text>
+    </button>
+    <button class="buy-button" bindtap="buyNow">立即购买</button>
+  </view>
+</view>

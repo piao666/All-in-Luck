@@ -1,0 +1,9 @@
+{
+  "desc": "All in Luck UI demo sitemap",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

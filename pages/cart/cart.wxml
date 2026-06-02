@@ -1,0 +1,83 @@
+<view class="cart-page">
+  <view class="cart-header">
+    <view class="cart-title">购物车</view>
+  </view>
+
+  <block wx:if="{{!showCheckoutDemo}}">
+    <view class="empty-card">
+      <view class="empty-illustration">
+        <view class="cart-basket"></view>
+        <view class="empty-chip one"></view>
+        <view class="empty-chip two"></view>
+      </view>
+      <view class="empty-text">空空如也，快去逛逛吧~</view>
+      <button class="primary-button" bindtap="goMenu">继续逛逛</button>
+      <button class="demo-button" bindtap="showDemoCart">查看结算演示</button>
+    </view>
+
+    <view class="section-title">猜你喜欢</view>
+    <view class="recommend-grid">
+      <view
+        wx:for="{{recommendProducts}}"
+        wx:key="id"
+        class="recommend-card"
+        data-id="{{item.id}}"
+        bindtap="goProductDetail"
+      >
+        <view class="recommend-image {{item.imageType}}"></view>
+        <view class="recommend-name">{{item.name}}</view>
+        <view class="recommend-bottom">
+          <view class="recommend-price">￥{{item.price}}</view>
+          <button class="mini-add" data-id="{{item.id}}" catchtap="addRecommendProduct">+</button>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:else>
+    <view class="table-card">
+      <text class="table-label">当前桌号</text>
+      <text class="table-no">A06</text>
+      <button class="clear-button" bindtap="clearCart">清空</button>
+    </view>
+
+    <view class="cart-list">
+      <view wx:for="{{cartItems}}" wx:key="id" class="cart-item">
+        <view class="cart-image {{item.imageType}}"></view>
+        <view class="cart-info">
+          <view class="cart-name">{{item.name}}</view>
+          <view class="cart-desc">{{item.desc}}</view>
+          <view class="cart-price">￥{{item.price}}</view>
+          <view class="cart-subtotal">小计 ￥{{item.subtotal}}</view>
+        </view>
+        <view class="quantity-control">
+          <button class="quantity-btn" data-id="{{item.id}}" catchtap="decreaseQty">-</button>
+          <text class="quantity-num">{{item.count}}</text>
+          <button class="quantity-btn" data-id="{{item.id}}" catchtap="increaseQty">+</button>
+        </view>
+      </view>
+    </view>
+
+    <view class="remark-card">
+      <view class="remark-label">备注</view>
+      <input class="remark-input" placeholder="请输入口味、人数或服务需求" placeholder-class="remark-placeholder" />
+    </view>
+
+    <view class="summary-card">
+      <view class="summary-row">
+        <text>可用积分</text>
+        <text class="gold-text">{{userPoints}}</text>
+      </view>
+      <view class="summary-row">
+        <text>商品数量</text>
+        <text>{{totalCount}}</text>
+      </view>
+      <view class="summary-row total">
+        <text>合计金额</text>
+        <text>￥{{totalAmount}}</text>
+      </view>
+    </view>
+
+    <button class="checkout-button" bindtap="checkout">去结算</button>
+  </block>
+</view>

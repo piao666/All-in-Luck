@@ -1,0 +1,549 @@
+.home-page {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 34rpx 28rpx 56rpx;
+  overflow: visible;
+  background:
+    radial-gradient(circle at 20% 6%, rgba(216, 168, 74, 0.14), transparent 26%),
+    radial-gradient(circle at 88% 22%, rgba(255, 61, 69, 0.12), transparent 22%),
+    linear-gradient(180deg, #070b34 0%, #13164F 44%, #08113d 100%);
+}
+
+.home-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.32;
+  background-image:
+    linear-gradient(135deg, transparent 0 48%, rgba(255, 255, 255, 0.05) 49% 51%, transparent 52%),
+    radial-gradient(circle, rgba(216, 168, 74, 0.24) 0 2rpx, transparent 3rpx);
+  background-size: 180rpx 180rpx, 150rpx 150rpx;
+  pointer-events: none;
+}
+
+.brand-row,
+.search-card,
+.brand-banner,
+.action-banner,
+.service-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34rpx;
+  padding: 8rpx 0 32rpx;
+}
+
+.brand-title {
+  color: #ffffff;
+  font-size: 54rpx;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-shadow: 0 6rpx 18rpx rgba(0, 0, 0, 0.42);
+}
+
+.suit {
+  color: #D8A84A;
+  font-size: 34rpx;
+}
+
+.search-card {
+  display: flex;
+  align-items: center;
+  min-height: 86rpx;
+  box-sizing: border-box;
+  padding: 10rpx 12rpx 10rpx 28rpx;
+  border: 4rpx solid rgba(255, 255, 255, 0.9);
+  border-radius: 999rpx;
+  background: #ffffff;
+  box-shadow: 0 14rpx 38rpx rgba(0, 0, 0, 0.18);
+}
+
+.search-icon {
+  position: relative;
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+  border: 4rpx solid #4b5068;
+  border-radius: 50%;
+}
+
+.search-icon::after {
+  content: "";
+  position: absolute;
+  width: 16rpx;
+  height: 4rpx;
+  margin-top: 28rpx;
+  margin-left: 24rpx;
+  border-radius: 4rpx;
+  background: #4b5068;
+  transform: rotate(45deg);
+}
+
+.search-placeholder {
+  flex: 1;
+  min-width: 0;
+  color: #8e93a3;
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-button {
+  width: 138rpx;
+  height: 66rpx;
+  margin: 0;
+  padding: 0;
+  border-radius: 999rpx;
+  background: #13164F;
+  color: #ffffff;
+  font-size: 28rpx;
+  font-weight: 700;
+  line-height: 66rpx;
+}
+
+.search-button::after {
+  border: 0;
+}
+
+.brand-banner {
+  display: flex;
+  align-items: center;
+  min-height: 250rpx;
+  margin-top: 28rpx;
+  padding: 32rpx 30rpx;
+  border: 2rpx solid rgba(216, 168, 74, 0.28);
+  border-radius: 28rpx;
+  background:
+    radial-gradient(circle at 86% 22%, rgba(216, 168, 74, 0.22), transparent 22%),
+    linear-gradient(135deg, rgba(15, 22, 76, 0.98), rgba(7, 10, 40, 0.94));
+  box-shadow: inset 0 0 80rpx rgba(10, 18, 74, 0.8), 0 16rpx 36rpx rgba(0, 0, 0, 0.2);
+}
+
+.poker-stack {
+  position: relative;
+  width: 178rpx;
+  height: 178rpx;
+  flex: 0 0 178rpx;
+}
+
+.poker-card {
+  position: absolute;
+  width: 78rpx;
+  height: 108rpx;
+  border-radius: 10rpx;
+  background: linear-gradient(160deg, #ffffff, #dfe6ff);
+  color: #111947;
+  font-size: 28rpx;
+  font-weight: 800;
+  text-align: center;
+  line-height: 58rpx;
+  box-shadow: 0 10rpx 22rpx rgba(0, 0, 0, 0.28);
+}
+
+.card-a {
+  left: 10rpx;
+  top: 18rpx;
+  transform: rotate(-14deg);
+  color: #c71926;
+}
+
+.card-k {
+  left: 58rpx;
+  top: 6rpx;
+  transform: rotate(9deg);
+}
+
+.chip {
+  position: absolute;
+  border-radius: 50%;
+  border: 10rpx solid #D8A84A;
+  background: #0e164b;
+}
+
+.chip-main {
+  left: 54rpx;
+  bottom: 18rpx;
+  width: 76rpx;
+  height: 76rpx;
+}
+
+.chip-small {
+  left: 118rpx;
+  bottom: 10rpx;
+  width: 42rpx;
+  height: 42rpx;
+  border-width: 7rpx;
+}
+
+.brand-copy {
+  flex: 1;
+  min-width: 0;
+  padding-left: 18rpx;
+}
+
+.banner-title {
+  color: #ffffff;
+  font-size: 48rpx;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 0 6rpx 16rpx rgba(0, 0, 0, 0.42);
+}
+
+.banner-title.large {
+  margin-top: 4rpx;
+  font-size: 58rpx;
+}
+
+.banner-line {
+  width: 210rpx;
+  height: 2rpx;
+  margin: 18rpx 0 12rpx;
+  background: linear-gradient(90deg, transparent, #D8A84A, transparent);
+}
+
+.banner-subtitle {
+  color: #D8A84A;
+  font-size: 20rpx;
+  font-weight: 700;
+}
+
+.glass-shape {
+  width: 68rpx;
+  height: 120rpx;
+  border: 5rpx solid rgba(216, 168, 74, 0.74);
+  border-top-width: 10rpx;
+  border-radius: 12rpx 12rpx 24rpx 24rpx;
+  transform: skew(-8deg);
+}
+
+.action-banner {
+  display: flex;
+  align-items: center;
+  min-height: 190rpx;
+  box-sizing: border-box;
+  margin-top: 24rpx;
+  padding: 28rpx;
+  border-radius: 28rpx;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 86% 38%, rgba(255, 255, 255, 0.12), transparent 28%),
+    linear-gradient(135deg, #df202b 0%, #97111c 100%);
+  box-shadow: 0 14rpx 34rpx rgba(0, 0, 0, 0.22);
+}
+
+.order-banner {
+  min-height: 210rpx;
+}
+
+.banner-art {
+  position: relative;
+  width: 210rpx;
+  height: 150rpx;
+  flex: 0 0 210rpx;
+}
+
+.bottle-shape {
+  position: absolute;
+  left: 82rpx;
+  bottom: 12rpx;
+  width: 52rpx;
+  height: 118rpx;
+  border-radius: 18rpx 18rpx 12rpx 12rpx;
+  background: linear-gradient(90deg, #3a180e, #b66f22, #2a0d08);
+  border: 2rpx solid rgba(216, 168, 74, 0.5);
+}
+
+.bottle-shape::before {
+  content: "";
+  position: absolute;
+  left: 14rpx;
+  top: -34rpx;
+  width: 24rpx;
+  height: 38rpx;
+  border-radius: 8rpx;
+  background: #6b2c12;
+}
+
+.red-chip {
+  position: absolute;
+  left: 18rpx;
+  bottom: 18rpx;
+  width: 74rpx;
+  height: 74rpx;
+  border-radius: 50%;
+  border: 10rpx solid #ffffff;
+  background: #FF3D45;
+}
+
+.mini-card {
+  position: absolute;
+  left: 20rpx;
+  top: 8rpx;
+  width: 68rpx;
+  height: 92rpx;
+  border-radius: 10rpx;
+  background: #ffffff;
+  color: #c81926;
+  font-size: 30rpx;
+  font-weight: 800;
+  text-align: center;
+  line-height: 56rpx;
+  transform: rotate(-12deg);
+}
+
+.action-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.action-title {
+  color: #ffffff;
+  font-size: 46rpx;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.action-subtitle {
+  margin-top: 12rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.arrow-button,
+.small-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border: 2rpx solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+}
+
+.arrow-button {
+  width: 62rpx;
+  height: 62rpx;
+  font-size: 54rpx;
+  line-height: 1;
+}
+
+.recharge-banner {
+  min-height: 210rpx;
+  background:
+    radial-gradient(circle at 72% 42%, rgba(216, 168, 74, 0.28), transparent 24%),
+    linear-gradient(135deg, #d8222d, #98131e);
+}
+
+.deal-box {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8rpx;
+  margin-top: 18rpx;
+  padding: 14rpx 22rpx;
+  border: 2rpx solid rgba(216, 168, 74, 0.78);
+  border-radius: 16rpx;
+  color: #ffe3a0;
+  font-size: 28rpx;
+  font-weight: 800;
+}
+
+.member-card {
+  width: 190rpx;
+  height: 112rpx;
+  box-sizing: border-box;
+  padding: 24rpx 18rpx;
+  border: 2rpx solid rgba(216, 168, 74, 0.7);
+  border-radius: 18rpx;
+  background: linear-gradient(135deg, #111111, #33312b);
+  color: #D8A84A;
+  font-size: 18rpx;
+  font-weight: 800;
+  transform: rotate(7deg);
+}
+
+.member-card text {
+  display: block;
+}
+
+.gold-coins {
+  display: flex;
+  align-items: flex-end;
+  gap: 6rpx;
+  margin: 0 16rpx;
+}
+
+.gold-coins view {
+  width: 34rpx;
+  height: 44rpx;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffe2a1, #D8A84A);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18rpx;
+  margin-top: 24rpx;
+}
+
+.service-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  min-height: 160rpx;
+  box-sizing: border-box;
+  padding: 24rpx 20rpx;
+  border-radius: 24rpx;
+  background:
+    radial-gradient(circle at 85% 24%, rgba(255, 255, 255, 0.1), transparent 26%),
+    linear-gradient(135deg, #ce1f29, #92131d);
+  overflow: hidden;
+}
+
+.service-title {
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: 900;
+}
+
+.service-subtitle {
+  margin-top: 10rpx;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 22rpx;
+}
+
+.wifi-mark {
+  position: relative;
+  width: 72rpx;
+  height: 68rpx;
+  flex: 0 0 72rpx;
+}
+
+.wifi-mark view {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border: 8rpx solid #ffe2a1;
+  border-bottom: 0;
+  border-radius: 100rpx 100rpx 0 0;
+  transform: translateX(-50%);
+}
+
+.wifi-mark view:nth-child(1) {
+  width: 66rpx;
+  height: 50rpx;
+}
+
+.wifi-mark view:nth-child(2) {
+  width: 44rpx;
+  height: 32rpx;
+}
+
+.wifi-mark view:nth-child(3) {
+  width: 12rpx;
+  height: 12rpx;
+  border: 0;
+  border-radius: 50%;
+  background: #ffe2a1;
+}
+
+.supply-box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 74rpx;
+  height: 70rpx;
+  flex: 0 0 74rpx;
+  border-radius: 10rpx;
+  background: #111947;
+  border: 2rpx solid rgba(216, 168, 74, 0.6);
+}
+
+.supply-item {
+  width: 12rpx;
+  height: 42rpx;
+  margin: 0 4rpx 8rpx;
+  border-radius: 8rpx;
+  background: #ffffff;
+}
+
+.supply-item.tall {
+  height: 58rpx;
+  background: #D8A84A;
+}
+
+.small-arrow {
+  position: absolute;
+  right: 18rpx;
+  bottom: 20rpx;
+  width: 42rpx;
+  height: 42rpx;
+  font-size: 38rpx;
+}
+
+.points-banner {
+  min-height: 198rpx;
+  background:
+    radial-gradient(circle at 18% 36%, rgba(216, 168, 74, 0.28), transparent 24%),
+    linear-gradient(135deg, #c71c27, #81111a);
+}
+
+.trophy-shape {
+  position: relative;
+  width: 178rpx;
+  height: 144rpx;
+  flex: 0 0 178rpx;
+}
+
+.trophy-cup {
+  position: absolute;
+  left: 38rpx;
+  top: 12rpx;
+  width: 96rpx;
+  height: 78rpx;
+  border-radius: 0 0 38rpx 38rpx;
+  background: linear-gradient(135deg, #fff0b8, #D8A84A 48%, #9b6b21);
+}
+
+.trophy-cup::before,
+.trophy-cup::after {
+  content: "";
+  position: absolute;
+  top: 12rpx;
+  width: 38rpx;
+  height: 44rpx;
+  border: 8rpx solid #D8A84A;
+  border-radius: 50%;
+}
+
+.trophy-cup::before {
+  left: -34rpx;
+}
+
+.trophy-cup::after {
+  right: -34rpx;
+}
+
+.trophy-base {
+  position: absolute;
+  left: 58rpx;
+  bottom: 12rpx;
+  width: 76rpx;
+  height: 22rpx;
+  border-radius: 999rpx;
+  background: #D8A84A;
+}
+
+.points-note {
+  margin-top: 12rpx;
+  color: #ffe2a1;
+  font-size: 22rpx;
+}

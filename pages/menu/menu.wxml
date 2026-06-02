@@ -1,0 +1,98 @@
+<view class="menu-page">
+  <view class="top-bar">
+    <view class="home-mark" bindtap="goHome"></view>
+    <view class="title-wrap">
+      <text class="gold-suit">♠</text>
+      <text class="page-name">点单</text>
+      <text class="gold-suit">◆</text>
+    </view>
+    <view class="top-actions">
+      <text class="dot-more">•••</text>
+      <text class="target-icon"></text>
+    </view>
+  </view>
+
+  <view class="notice-card">
+    <view class="speaker">
+      <view></view>
+    </view>
+    <text class="notice-text">All in Luck 很高兴为您服务</text>
+    <view class="notice-deco">
+      <view class="deco-card">A</view>
+      <view class="deco-chip"></view>
+      <view class="deco-bottle"></view>
+    </view>
+  </view>
+
+  <view class="menu-layout">
+    <scroll-view class="category-panel" scroll-y="true" enhanced="true" show-scrollbar="false">
+      <view
+        wx:for="{{categories}}"
+        wx:key="id"
+        class="category-item {{selectedCategoryId === item.id ? 'active' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="selectCategory"
+      >
+        <text>{{item.name}}</text>
+      </view>
+      <view class="category-brand">
+        <text>ALL IN</text>
+        <text>LUCK</text>
+      </view>
+    </scroll-view>
+
+    <scroll-view class="product-panel" scroll-y="true" enhanced="true" show-scrollbar="false">
+      <view wx:if="{{filteredProducts.length}}" class="product-list">
+        <view
+          wx:for="{{filteredProducts}}"
+          wx:key="id"
+          class="product-card"
+          data-id="{{item.id}}"
+          bindtap="goProductDetail"
+        >
+          <view class="product-image {{item.imageType}}">
+            <view class="image-badge">ALL IN</view>
+            <view class="drink-shapes">
+              <view class="glass one"></view>
+              <view class="glass two"></view>
+              <view class="chip-mini"></view>
+            </view>
+          </view>
+          <view class="product-info">
+            <view class="product-title-row">
+              <text class="product-name">{{item.name}}</text>
+              <text class="product-tag">{{item.tag}}</text>
+            </view>
+            <view class="product-points">赠送 {{item.points}} 娱乐积分，{{item.desc}}</view>
+            <view class="product-sales">已售 {{item.sales}}</view>
+            <view class="product-bottom">
+              <view class="price">
+                <text class="currency">￥</text>{{item.price}}
+              </view>
+              <view class="product-action">
+                <view wx:if="{{cartMap[item.id]}}" class="quantity-control" catchtap="stopTap">
+                  <button class="quantity-btn minus" data-id="{{item.id}}" catchtap="decreaseProduct">-</button>
+                  <text class="quantity-num">{{cartMap[item.id]}}</text>
+                  <button class="quantity-btn plus" data-id="{{item.id}}" catchtap="increaseProduct">+</button>
+                </view>
+                <button
+                  wx:else
+                  class="add-button"
+                  data-id="{{item.id}}"
+                  catchtap="increaseProduct"
+                >+</button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view wx:else class="empty-panel">
+        <view class="empty-icon">♠</view>
+        <view class="empty-title">当前分类暂无商品</view>
+        <view class="empty-text">请先查看其他酒水或套餐</view>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>
