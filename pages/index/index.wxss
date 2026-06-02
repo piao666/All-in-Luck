@@ -1,0 +1,32 @@
+.container {
+  padding: 48rpx 36rpx;
+}
+
+.title {
+  font-size: 42rpx;
+  font-weight: 700;
+  margin-bottom: 16rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #9ca3af;
+  margin-bottom: 40rpx;
+}
+
+.section {
+  background: #1f2937;
+  border-radius: 16rpx;
+  padding: 24rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 18rpx;
+}
+
+.item {
+  font-size: 28rpx;
+  line-height: 1.8;
+}
