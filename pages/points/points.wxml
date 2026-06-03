@@ -11,6 +11,7 @@
       <text class="points-label">当前可用积分</text>
       <text class="points-value">{{points}}</text>
       <text class="points-note">到店消费、套餐购买均可获得积分</text>
+      <button class="points-detail-button" bindtap="showPointsDetail">积分明细</button>
     </view>
   </view>
 

@@ -12,7 +12,6 @@
       </view>
       <view class="empty-text">空空如也，快去逛逛吧~</view>
       <button class="primary-button" bindtap="goMenu">继续逛逛</button>
-      <button class="demo-button" bindtap="showDemoCart">查看结算演示</button>
     </view>
 
     <view class="section-title">猜你喜欢</view>
