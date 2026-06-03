@@ -19,7 +19,7 @@
 }
 
 .empty-card {
-  height: 580rpx;
+  height: 500rpx;
   box-sizing: border-box;
   padding: 36rpx 24rpx;
   border-radius: 24rpx;
@@ -99,21 +99,7 @@
   line-height: 80rpx;
 }
 
-.demo-button {
-  width: 288rpx;
-  height: 64rpx;
-  margin: 18rpx 0 0;
-  padding: 0;
-  border-radius: 32rpx;
-  border: 2rpx solid #D8A84A;
-  background: #ffffff;
-  color: #8b5d12;
-  font-size: 26rpx;
-  line-height: 64rpx;
-}
-
 .primary-button::after,
-.demo-button::after,
 .clear-button::after,
 .mini-add::after,
 .quantity-btn::after,
@@ -386,7 +372,7 @@
 }
 
 .checkout-button {
-  width: 100%;
+  width: 694rpx;
   height: 84rpx;
   margin: 24rpx 0 0;
   padding: 0;

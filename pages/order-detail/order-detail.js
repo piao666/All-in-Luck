@@ -36,5 +36,17 @@ Page({
       content,
       showCancel: false
     })
+  },
+
+  goMenu() {
+    wx.switchTab({
+      url: '/pages/menu/menu'
+    })
+  },
+
+  goHome() {
+    wx.switchTab({
+      url: '/pages/home/home'
+    })
   }
 })

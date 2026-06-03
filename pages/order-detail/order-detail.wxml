@@ -67,9 +67,13 @@
     </view>
   </view>
 
-  <button
-    wx:if="{{order.statusType !== 'done'}}"
-    class="primary-button"
-    bindtap="handlePrimaryAction"
-  >{{order.statusType === 'pending' ? '去付款' : '出示使用'}}</button>
+  <view class="action-row">
+    <button
+      wx:if="{{order.statusType !== 'done'}}"
+      class="primary-button"
+      bindtap="handlePrimaryAction"
+    >{{order.statusType === 'pending' ? '去付款' : '出示使用'}}</button>
+    <button class="secondary-button" bindtap="goMenu">再来一单</button>
+    <button class="secondary-button home-button" bindtap="goHome">返回首页</button>
+  </view>
 </view>

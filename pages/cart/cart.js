@@ -21,10 +21,6 @@ Page({
     })
   },
 
-  showDemoCart() {
-    this.loadCart()
-  },
-
   goProductDetail(event) {
     const productId = event.currentTarget.dataset.id
     wx.navigateTo({

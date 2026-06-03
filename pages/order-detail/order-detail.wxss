@@ -254,10 +254,18 @@
   color: #111A33;
 }
 
+.action-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14rpx;
+  margin-top: 24rpx;
+}
+
 .primary-button {
   width: 168rpx;
   height: 58rpx;
-  margin: 24rpx 0 0 auto;
+  margin: 0;
   padding: 0;
   border-radius: 29rpx;
   background: #FF3D45;
@@ -267,6 +275,26 @@
   line-height: 58rpx;
 }
 
-.primary-button::after {
+.secondary-button {
+  width: 150rpx;
+  height: 58rpx;
+  margin: 0;
+  padding: 0;
+  border-radius: 29rpx;
+  border: 2rpx solid #D8A84A;
+  background: #ffffff;
+  color: #8b5d12;
+  font-size: 24rpx;
+  font-weight: 800;
+  line-height: 58rpx;
+}
+
+.home-button {
+  border-color: rgba(17, 26, 51, 0.18);
+  color: #111A33;
+}
+
+.primary-button::after,
+.secondary-button::after {
   border: 0;
 }

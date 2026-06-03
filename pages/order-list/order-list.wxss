@@ -198,15 +198,23 @@
   font-weight: 900;
 }
 
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12rpx;
+}
+
 .action-button,
-.detail-button {
-  width: 132rpx;
-  height: 54rpx;
+.detail-button,
+.rebuy-button {
+  width: 112rpx;
+  height: 50rpx;
   margin: 0;
   padding: 0;
-  border-radius: 27rpx;
-  font-size: 24rpx;
-  line-height: 54rpx;
+  border-radius: 25rpx;
+  font-size: 22rpx;
+  line-height: 50rpx;
 }
 
 .action-button {
@@ -221,8 +229,16 @@
   color: #8b5d12;
 }
 
+.rebuy-button {
+  border: 2rpx solid #FF3D45;
+  background: #ffffff;
+  color: #FF3D45;
+  font-weight: 800;
+}
+
 .action-button::after,
-.detail-button::after {
+.detail-button::after,
+.rebuy-button::after {
   border: 0;
 }
 

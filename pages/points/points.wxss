@@ -45,6 +45,7 @@
 }
 
 .points-card {
+  position: relative;
   height: 188rpx;
   box-sizing: border-box;
   margin-top: 26rpx;
@@ -54,6 +55,26 @@
   background:
     radial-gradient(circle at 86% 30%, rgba(216, 168, 74, 0.22), transparent 24%),
     linear-gradient(135deg, #d81f2b, #96131d);
+}
+
+.points-detail-button {
+  position: absolute;
+  right: 28rpx;
+  top: 28rpx;
+  width: 132rpx;
+  height: 44rpx;
+  margin: 0;
+  padding: 0;
+  border-radius: 22rpx;
+  border: 2rpx solid rgba(255, 226, 161, 0.72);
+  background: transparent;
+  color: #ffe2a1;
+  font-size: 22rpx;
+  line-height: 44rpx;
+}
+
+.points-detail-button::after {
+  border: 0;
 }
 
 .points-label,

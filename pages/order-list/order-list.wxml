@@ -41,18 +41,24 @@
       </view>
       <view class="card-foot">
         <view class="amount">¥{{item.totalAmount}}</view>
-        <button
-          wx:if="{{item.statusType !== 'done'}}"
-          class="action-button"
-          data-status="{{item.statusType}}"
-          catchtap="handleAction"
-        >{{item.statusType === 'pending' ? '去付款' : '去使用'}}</button>
-        <button
-          wx:else
-          class="detail-button"
-          data-id="{{item.id}}"
-          catchtap="goDetail"
-        >看详情</button>
+        <view class="button-group">
+          <button
+            wx:if="{{item.statusType !== 'done'}}"
+            class="action-button"
+            data-status="{{item.statusType}}"
+            catchtap="handleAction"
+          >{{item.statusType === 'pending' ? '去付款' : '去使用'}}</button>
+          <button
+            wx:else
+            class="rebuy-button"
+            catchtap="goMenu"
+          >再来一单</button>
+          <button
+            class="detail-button"
+            data-id="{{item.id}}"
+            catchtap="goDetail"
+          >看详情</button>
+        </view>
       </view>
     </view>
   </view>

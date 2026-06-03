@@ -34,6 +34,12 @@ Page({
     })
   },
 
+  goMenu() {
+    wx.switchTab({
+      url: '/pages/menu/menu'
+    })
+  },
+
   handleAction(event) {
     const statusType = event.currentTarget.dataset.status
     const title = statusType === 'pending' ? '支付演示' : '使用演示'

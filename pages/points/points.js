@@ -90,5 +90,12 @@ Page({
       content: `当前为 UI 演示版，暂不扣减积分。商品：${gift.name}`,
       showCancel: false
     })
+  },
+
+  showPointsDetail() {
+    wx.showToast({
+      title: '积分明细暂未接入',
+      icon: 'none'
+    })
   }
 })
