@@ -9,12 +9,12 @@
 }
 
 .detail-nav {
-  height: 132rpx;
+  height: 112rpx;
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-sizing: border-box;
-  padding: 0 0 24rpx;
+  padding: 0 0 16rpx;
 }
 
 .back-icon {
@@ -34,36 +34,6 @@
   border-left: 6rpx solid #ffffff;
   border-bottom: 6rpx solid #ffffff;
   transform: rotate(45deg);
-}
-
-.nav-title {
-  font-size: 34rpx;
-  font-weight: 800;
-}
-
-.capsule {
-  width: 150rpx;
-  height: 58rpx;
-  flex: 0 0 150rpx;
-  border: 2rpx solid rgba(255, 255, 255, 0.24);
-  border-radius: 999rpx;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  box-sizing: border-box;
-}
-
-.capsule text {
-  font-size: 28rpx;
-  color: #ffffff;
-}
-
-.capsule view {
-  width: 28rpx;
-  height: 28rpx;
-  border: 6rpx solid #ffffff;
-  border-radius: 50%;
-  box-sizing: border-box;
 }
 
 .hero-card {

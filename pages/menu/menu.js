@@ -8,7 +8,11 @@ Page({
     products,
     filteredProducts: [],
     selectedCategoryId: 'set',
-    cartMap: {}
+    cartMap: {},
+    cartItems: [],
+    totalCount: 0,
+    totalAmount: 0,
+    isCartPanelVisible: false
   },
 
   onLoad() {
@@ -21,11 +25,22 @@ Page({
 
   syncCartMap() {
     const cartMap = {}
-    cart.getCart().forEach((item) => {
+    const cartItems = cart.getCart().map((item) => Object.assign({}, item, {
+      subtotal: Number(item.price) * Number(item.count)
+    }))
+    const totalCount = cartItems.reduce((total, item) => total + item.count, 0)
+    const totalAmount = cart.getCartTotal(cartItems)
+
+    cartItems.forEach((item) => {
       cartMap[item.id] = item.count
     })
+
     this.setData({
-      cartMap
+      cartMap,
+      cartItems,
+      totalCount,
+      totalAmount,
+      isCartPanelVisible: totalCount > 0 ? this.data.isCartPanelVisible : false
     })
   },
 
@@ -72,6 +87,58 @@ Page({
     const currentCount = this.data.cartMap[productId] || 0
     cart.updateCartItem(productId, currentCount - 1)
     this.syncCartMap()
+  },
+
+  increaseCartItem(event) {
+    const productId = event.currentTarget.dataset.id
+    const item = this.data.cartItems.find((cartItem) => cartItem.id === Number(productId))
+
+    if (!item) {
+      return
+    }
+
+    cart.updateCartItem(productId, item.count + 1)
+    this.syncCartMap()
+  },
+
+  decreaseCartItem(event) {
+    const productId = event.currentTarget.dataset.id
+    const item = this.data.cartItems.find((cartItem) => cartItem.id === Number(productId))
+
+    if (!item) {
+      return
+    }
+
+    cart.updateCartItem(productId, item.count - 1)
+    this.syncCartMap()
+  },
+
+  openCartPanel() {
+    if (!this.data.totalCount) {
+      return
+    }
+
+    this.setData({
+      isCartPanelVisible: true
+    })
+  },
+
+  closeCartPanel() {
+    this.setData({
+      isCartPanelVisible: false
+    })
+  },
+
+  clearCart() {
+    cart.clearCart()
+    this.syncCartMap()
+  },
+
+  goCart() {
+    this.closeCartPanel()
+    wx.switchTab({
+      url: '/pages/cart/cart'
+    })
   },
 
   stopTap() {

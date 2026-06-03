@@ -1,13 +1,17 @@
 .mine-page {
+  width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
   padding-bottom: 132rpx;
+  overflow-x: hidden;
   background: #F5F5F5;
   color: #111A33;
 }
 
 .member-hero {
-  height: 360rpx;
+  width: 100%;
+  max-width: 100%;
+  height: 320rpx;
   box-sizing: border-box;
   padding: 28rpx;
   background:
@@ -17,6 +21,7 @@
 }
 
 .hero-title {
+  display: none;
   text-align: center;
   font-size: 36rpx;
   font-weight: 800;
@@ -26,7 +31,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-top: 34rpx;
+  margin-top: 18rpx;
 }
 
 .avatar {
@@ -94,6 +99,7 @@
 .stats-card {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 100%;
   height: 136rpx;
   margin: -44rpx 28rpx 0;
   border-radius: 20rpx;
@@ -125,6 +131,8 @@
 }
 
 .white-card {
+  max-width: 100%;
+  box-sizing: border-box;
   margin: 24rpx 28rpx 0;
   border-radius: 20rpx;
   background: #ffffff;
@@ -205,6 +213,7 @@
 }
 
 .points-banner {
+  max-width: 100%;
   height: 144rpx;
   box-sizing: border-box;
   margin: 24rpx 28rpx 0;

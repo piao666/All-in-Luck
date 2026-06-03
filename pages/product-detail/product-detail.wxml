@@ -1,11 +1,6 @@
 <view class="detail-page">
   <view class="detail-nav">
     <view class="back-icon" bindtap="goBack"></view>
-    <view class="nav-title">商品详情</view>
-    <view class="capsule">
-      <text>•••</text>
-      <view></view>
-    </view>
   </view>
 
   <view class="hero-card">

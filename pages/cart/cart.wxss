@@ -1,14 +1,16 @@
 .cart-page {
+  width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
   padding: 24rpx 28rpx 132rpx;
+  overflow-x: hidden;
   background: #F5F5F5;
   color: #111A33;
 }
 
 .cart-header {
-  height: 76rpx;
-  display: flex;
+  display: none;
+  height: 0;
   align-items: center;
   justify-content: center;
 }
@@ -19,6 +21,8 @@
 }
 
 .empty-card {
+  width: 100%;
+  max-width: 100%;
   height: 500rpx;
   box-sizing: border-box;
   padding: 36rpx 24rpx;
@@ -120,6 +124,7 @@
 }
 
 .recommend-card {
+  max-width: 100%;
   min-height: 340rpx;
   box-sizing: border-box;
   padding: 16rpx;
@@ -186,6 +191,8 @@
 .remark-card,
 .summary-card,
 .cart-list {
+  max-width: 100%;
+  box-sizing: border-box;
   border-radius: 20rpx;
   background: #ffffff;
 }
@@ -372,7 +379,8 @@
 }
 
 .checkout-button {
-  width: 694rpx;
+  width: 100%;
+  max-width: 694rpx;
   height: 84rpx;
   margin: 24rpx 0 0;
   padding: 0;

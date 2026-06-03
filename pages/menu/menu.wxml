@@ -64,7 +64,6 @@
               <text class="product-tag">{{item.tag}}</text>
             </view>
             <view class="product-points">赠送 {{item.points}} 娱乐积分，{{item.desc}}</view>
-            <view class="product-sales">已售 {{item.sales}}</view>
             <view class="product-bottom">
               <view class="price">
                 <text class="currency">￥</text>{{item.price}}
@@ -95,4 +94,46 @@
     </scroll-view>
   </view>
 
+  <view wx:if="{{totalCount > 0}}" class="cart-bar" catchtap="openCartPanel">
+    <view class="cart-bar-left">
+      <view class="cart-bag">
+        <text>{{totalCount}}</text>
+      </view>
+      <view class="cart-bar-copy">
+        <view class="cart-bar-title">本地购物车</view>
+        <view class="cart-bar-amount">￥{{totalAmount}}</view>
+      </view>
+    </view>
+    <button class="cart-checkout-btn" catchtap="goCart">去购物车结算</button>
+  </view>
+
+  <view wx:if="{{isCartPanelVisible}}" class="cart-panel-mask" catchtap="closeCartPanel"></view>
+  <view wx:if="{{isCartPanelVisible}}" class="cart-panel" catchtap="stopTap">
+    <view class="cart-panel-head">
+      <button class="cart-clear-btn" catchtap="clearCart">清空</button>
+      <button class="cart-close-btn" catchtap="closeCartPanel">⌄</button>
+    </view>
+    <scroll-view class="cart-panel-list" scroll-y="true" enhanced="true" show-scrollbar="false">
+      <view wx:for="{{cartItems}}" wx:key="id" class="cart-panel-item">
+        <view class="panel-item-image {{item.imageType}}"></view>
+        <view class="panel-item-info">
+          <view class="panel-item-name">{{item.name}}</view>
+          <view class="panel-item-desc">{{item.desc}}</view>
+          <view class="panel-item-price">￥{{item.price}}</view>
+        </view>
+        <view class="quantity-control panel-quantity" catchtap="stopTap">
+          <button class="quantity-btn minus" data-id="{{item.id}}" catchtap="decreaseCartItem">-</button>
+          <text class="quantity-num">{{item.count}}</text>
+          <button class="quantity-btn plus" data-id="{{item.id}}" catchtap="increaseCartItem">+</button>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="cart-panel-foot">
+      <view>
+        <view class="panel-foot-count">共 {{totalCount}} 件</view>
+        <view class="panel-foot-amount">￥{{totalAmount}}</view>
+      </view>
+      <button class="panel-checkout-btn" catchtap="goCart">去购物车结算</button>
+    </view>
+  </view>
 </view>

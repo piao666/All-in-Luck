@@ -1,7 +1,9 @@
 .order-page {
+  width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
   padding: 0 28rpx 56rpx;
+  overflow-x: hidden;
   background: #F5F5F5;
   color: #111A33;
 }
@@ -77,8 +79,11 @@
 }
 
 .order-card {
+  width: 100%;
+  max-width: 100%;
   min-height: 300rpx;
   box-sizing: border-box;
+  overflow: hidden;
   margin-bottom: 20rpx;
   padding: 22rpx;
   border-radius: 20rpx;
@@ -187,12 +192,16 @@
 }
 
 .card-foot {
+  width: 100%;
   margin-top: 24rpx;
   padding-top: 18rpx;
+  gap: 16rpx;
+  box-sizing: border-box;
   border-top: 1rpx solid #eeeeee;
 }
 
 .amount {
+  flex-shrink: 0;
   color: #FF3D45;
   font-size: 34rpx;
   font-weight: 900;
@@ -202,19 +211,32 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  flex-shrink: 1;
   gap: 12rpx;
+  min-width: 0;
 }
 
 .action-button,
-.detail-button,
 .rebuy-button {
-  width: 112rpx;
-  height: 50rpx;
+  width: 180rpx;
+  height: 52rpx;
   margin: 0;
   padding: 0;
-  border-radius: 25rpx;
-  font-size: 22rpx;
-  line-height: 50rpx;
+  border-radius: 26rpx;
+  font-size: 24rpx;
+  line-height: 52rpx;
+  box-sizing: border-box;
+}
+
+.detail-button {
+  width: 170rpx;
+  height: 52rpx;
+  margin: 0;
+  padding: 0;
+  border-radius: 26rpx;
+  font-size: 24rpx;
+  line-height: 52rpx;
+  box-sizing: border-box;
 }
 
 .action-button {
